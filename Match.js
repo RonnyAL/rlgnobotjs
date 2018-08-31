@@ -4,7 +4,7 @@ class Match {
         this._awayTeam = awayTeam;
         this._matchTime = matchTime;
         this._matchUrl = matchUrl;
-        this._awayTeamImg = awayTeamImg;
+        this._opponentImg = awayTeamImg;
     }
 
 
@@ -40,11 +40,11 @@ class Match {
         this._matchUrl = value;
     }
 
-    get awayTeamImg() {
-        return this._awayTeamImg;
+    get opponentImg() {
+        return this._opponentImg;
     }
 
-    set awayTeamImg(value) {
-        this._awayTeamImg = value;
+    set opponentImg(value) {
+        this._opponentImg = value;
     }
 }

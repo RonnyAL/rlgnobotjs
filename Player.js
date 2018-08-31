@@ -20,4 +20,5 @@ class Player {
     set steamId(value) {
         this._steamId = value;
     }
+
 }
