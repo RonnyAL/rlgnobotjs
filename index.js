@@ -89,8 +89,6 @@ function getNextMatch() {
                             opponentTeamName = awayTeam;
                         }
 
-                        console.log("Home: " + homeTeam + "\n" + "Away: " + awayTeam + "\n" + "Opponent: " + opponentTeamName + "Ascent: " + process.env.TEAMNAME);
-
                         let t = new Team(opponentTeamName, players, opponentURL);
 
                         // Create match object
@@ -110,8 +108,6 @@ function getNextMatch() {
 
     });
 }
-
-
 
 function getDoc(url) {
     return new Promise((resolve, reject) =>{
