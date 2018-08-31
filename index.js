@@ -6,7 +6,7 @@ const { JSDOM } = jsdom;
 
 
 client.on('ready', () => {
-    client.user.setActivity('old replays', {type: 'WATCHING'});
+    client.user.setActivity('old replays test', {type: 'WATCHING'});
 });
 
 client.on('message', msg => {
