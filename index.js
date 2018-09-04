@@ -20,10 +20,11 @@ client.on('message', msg => {
         getNextMatch().then(function(match) {
             embedMatch(msg.channel, match);
         });
-    } else if (content.toLowerCase().contains("god natt") && !event.getAuthor().isBot()) {
-        event.getChannel().sendMessage("God natt!" + msg.author.toString() + " :heart:").queue();
     }
     /* else if (command === 'invite') return msg.channel.send(process.env.INVITE); */
+    if (content.toLowerCase().contains("god natt") && !event.getAuthor().isBot()) {
+        event.getChannel().sendMessage("God natt!" + msg.author.toString() + " :heart:").queue();
+    }
 });
 
 client.login(process.env.TOKEN);
