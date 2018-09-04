@@ -13,7 +13,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if (msg.content.toLowerCase().includes("god natt") && !msg.author.bot) {
-        msg.channel.send("God natt!" + msg.author.toString() + " :heart:");
+        msg.channel.send("God natt, " + msg.author.toString() + "! :heart:");
     } else if (!msg.content.startsWith(process.env.PREFIX) /*|| !msg.guild */) return;
     const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
     const args = msg.content.split(' ').slice(1).join(' ');
