@@ -20,7 +20,7 @@ client.on('message', msg => {
         getNextMatch().then(function(match) {
             embedMatch(msg.channel, match);
         });
-    } else if (msg.content.toLowerCase().contains("god natt") && !event.getAuthor().isBot()) {
+    } else if (msg.content.toLowerCase().contains("god natt") && !msg.author.bot) {
         msg.channel.send("God natt!" + msg.author.toString() + " :heart:");
     }
     /* else if (command === 'invite') return msg.channel.send(process.env.INVITE); */
