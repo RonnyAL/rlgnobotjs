@@ -12,7 +12,9 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if (!msg.content.startsWith(process.env.PREFIX) /*|| !msg.guild */) return;
+    if (msg.content.toLowerCase().includes("god natt") && !msg.author.bot) {
+        msg.channel.send("God natt!" + msg.author.toString() + " :heart:");
+    } else if (!msg.content.startsWith(process.env.PREFIX) /*|| !msg.guild */) return;
     const command = msg.content.split(' ')[0].substr(process.env.PREFIX.length);
     const args = msg.content.split(' ').slice(1).join(' ');
     if (command === 'hallo' || command === 'hei') return msg.channel.send('Hei, ' + msg.author.toString() + "!");
@@ -20,8 +22,6 @@ client.on('message', msg => {
         getNextMatch().then(function(match) {
             embedMatch(msg.channel, match);
         });
-    } else if (msg.content.toLowerCase().contains("god natt") && !msg.author.bot) {
-        msg.channel.send("God natt!" + msg.author.toString() + " :heart:");
     }
     /* else if (command === 'invite') return msg.channel.send(process.env.INVITE); */
 });
